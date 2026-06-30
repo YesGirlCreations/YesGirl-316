@@ -174,6 +174,26 @@
       box-shadow: 0 0 17px rgba(100, 50, 130, 0.1);
     }
 
+    a.soft-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    a.soft-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(123, 63, 161, .18);
+    }
+
+    .card-link-note {
+      display: inline-block;
+      margin-top: 8px;
+      color: #c04491;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
     .icons, .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -283,7 +303,7 @@
   <a href="mystory.html">My Story</a>
   <a href="#youtube">YouTube</a>
   <a href="https://creations-by-yes-girl-316.printify.me" target="_blank">Shop</a>
-  <a href="encouragement.html">Encouragement</a>
+  <a href="encouragement.html">Journal</a>
   <a href="#prayer">Prayer</a>
 </nav>
 
@@ -299,11 +319,40 @@
     </p>
 
     <div class="icons">
-      <div class="soft-card"><div class="icon">✝️</div><h3>Faith</h3><p>Growing closer to Jesus every day.</p></div>
-      <div class="soft-card"><div class="icon">🦋</div><h3>Encouragement</h3><p>Uplifting hearts with His Truth.</p></div>
-      <div class="soft-card"><div class="icon">💗</div><h3>Creativity</h3><p>Created to create for His glory.</p></div>
-      <div class="soft-card"><div class="icon">🎵</div><h3>Music</h3><p>Worshiping through songs from the heart.</p></div>
-      <div class="soft-card"><div class="icon">📖</div><h3>Books</h3><p>Stories and words that inspire faith.</p></div>
+      <a class="soft-card" href="mystory.html">
+        <div class="icon">✝️</div>
+        <h3>Faith</h3>
+        <p>Growing closer to Jesus every day.</p>
+        <span class="card-link-note">Read My Story →</span>
+      </a>
+
+      <a class="soft-card" href="encouragement.html">
+        <div class="icon">🦋</div>
+        <h3>Encouragement</h3>
+        <p>Uplifting hearts with His Truth.</p>
+        <span class="card-link-note">Visit the Journal →</span>
+      </a>
+
+      <a class="soft-card" href="#shop">
+        <div class="icon">💗</div>
+        <h3>Creativity</h3>
+        <p>Created to create for His glory.</p>
+        <span class="card-link-note">Shop Creations →</span>
+      </a>
+
+      <a class="soft-card" href="#music">
+        <div class="icon">🎵</div>
+        <h3>Music</h3>
+        <p>Worshiping through songs from the heart.</p>
+        <span class="card-link-note">Music Page Coming Soon →</span>
+      </a>
+
+      <a class="soft-card" href="#shop">
+        <div class="icon">📖</div>
+        <h3>Books</h3>
+        <p>Stories and words that inspire faith.</p>
+        <span class="card-link-note">Books Coming Soon →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -338,6 +387,22 @@
       Follow along on YouTube for faith-filled encouragement, creativity, worship, and reminders that God is still working.
     </p>
     <a class="button" href="https://www.youtube.com/@yesgirl-316" target="_blank">▶ Go to YouTube</a>
+  </div>
+</section>
+
+<section id="music">
+  <div class="card">
+    <h1>🎵 Music</h1>
+    <p>
+      A music page is coming soon! This will be the place for worship songs, album covers,
+      lyrics, and links to my music ministry.
+    </p>
+    <p>
+      Once the music YouTube link is ready, I will connect this button directly to that page.
+    </p>
+    <div class="button-row">
+      <a class="button light" href="#about">Back to About ↑</a>
+    </div>
   </div>
 </section>
 
