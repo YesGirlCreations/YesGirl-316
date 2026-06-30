@@ -6,7 +6,6 @@
   <title>Creations By Yes Girl</title>
   <style>
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -18,12 +17,24 @@
       overflow-x: hidden;
     }
 
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.8), transparent 18%),
+        radial-gradient(circle at 85% 15%, rgba(255,214,236,.65), transparent 20%),
+        radial-gradient(circle at 50% 85%, rgba(230,214,255,.65), transparent 24%);
+      z-index: -1;
+    }
+
     header {
       min-height: 100vh;
-      padding: 48px 20px 70px;
+      padding: 38px 20px 72px;
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,.95), transparent 35%),
-        radial-gradient(circle at top right, rgba(255,214,236,.9), transparent 30%),
+        radial-gradient(circle at top left, rgba(255,255,255,.95), transparent 34%),
+        radial-gradient(circle at top right, rgba(255,214,236,.9), transparent 33%),
         linear-gradient(135deg, #fff7fb, #ffd6ec, #e6d6ff);
       position: relative;
       display: flex;
@@ -32,31 +43,43 @@
     }
 
     .hero {
-      width: min(980px, 100%);
+      width: min(1040px, 100%);
       margin: auto;
-      background: rgba(255,255,255,.58);
-      border: 1px solid rgba(255,255,255,.75);
-      border-radius: 38px;
-      padding: 40px 24px;
-      box-shadow: 0 20px 60px rgba(74, 26, 110, .16);
-      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 42px;
+      padding: 46px 26px;
+      box-shadow: 0 24px 70px rgba(74, 26, 110, .18);
+      backdrop-filter: blur(8px);
       position: relative;
       z-index: 2;
     }
 
     .logo {
-      max-width: 390px;
-      width: 88%;
+      max-width: 380px;
+      width: 86%;
       height: auto;
-      margin: 0 auto 12px;
+      margin: 0 auto 10px;
       display: block;
     }
 
+    .eyebrow {
+      display: inline-block;
+      margin: 10px auto 0;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.82);
+      color: #8b2f83;
+      font-weight: bold;
+      letter-spacing: .5px;
+      box-shadow: 0 0 18px rgba(214,156,255,.35);
+    }
+
     h1 {
-      font-size: clamp(40px, 7vw, 72px);
+      font-size: clamp(42px, 7vw, 74px);
       margin: 18px 0 8px;
       color: #3b176b;
-      line-height: 1.05;
+      line-height: 1.04;
     }
 
     h2 {
@@ -67,16 +90,16 @@
     }
 
     h3 {
-      font-size: 28px;
+      font-size: 27px;
       color: #7b3fa1;
-      margin-bottom: 10px;
+      margin: 8px 0 10px;
     }
 
     p {
       font-size: 20px;
-      max-width: 820px;
+      max-width: 840px;
       margin: 15px auto;
-      line-height: 1.65;
+      line-height: 1.68;
     }
 
     .button-row {
@@ -115,8 +138,8 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(9px);
       border-bottom: 1px solid rgba(123, 63, 161, .12);
       padding: 12px;
     }
@@ -129,16 +152,26 @@
       display: inline-block;
     }
 
-    section { padding: 76px 20px; }
+    nav a:hover { color: #c04491; }
+
+    section { padding: 78px 20px; }
 
     .card {
-      background: rgba(255, 255, 255, 0.86);
-      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.88);
+      max-width: 1050px;
       margin: 0 auto 28px;
-      padding: 42px 26px;
-      border-radius: 28px;
-      box-shadow: 0 0 28px rgba(100, 50, 130, 0.14);
-      border: 1px solid rgba(255,255,255,.85);
+      padding: 44px 28px;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(100, 50, 130, 0.14);
+      border: 1px solid rgba(255,255,255,.92);
+    }
+
+    .soft-card {
+      background: #fff7fb;
+      border: 1px solid rgba(214,156,255,.26);
+      border-radius: 24px;
+      padding: 26px 20px;
+      box-shadow: 0 0 17px rgba(100, 50, 130, 0.1);
     }
 
     .icons, .grid {
@@ -148,29 +181,30 @@
       margin-top: 32px;
     }
 
-    .icon-card, .mini-card {
-      padding: 24px 18px;
-      background: #fff7fb;
-      border-radius: 22px;
-      box-shadow: 0 0 16px rgba(100, 50, 130, 0.11);
-      border: 1px solid rgba(214, 156, 255, .24);
-    }
-
-    .icon-card div, .mini-card div {
-      font-size: 42px;
-      margin-bottom: 8px;
-    }
-
-    .icon-card p, .mini-card p { font-size: 17px; }
+    .icon { font-size: 44px; margin-bottom: 8px; }
+    .soft-card p { font-size: 17px; }
 
     .scripture {
-      font-size: 22px;
+      font-size: 23px;
       font-style: italic;
       color: #6b2d91;
       background: #fff7fb;
-      padding: 24px;
-      border-radius: 22px;
-      border-left: 6px solid #c04491;
+      padding: 26px;
+      border-radius: 24px;
+      border-left: 7px solid #c04491;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+
+    .highlight {
+      color: #c04491;
+      font-weight: bold;
     }
 
     .butterfly {
@@ -194,7 +228,7 @@
     }
 
     footer {
-      padding: 36px 20px;
+      padding: 38px 20px;
       background: #3b244d;
       color: white;
     }
@@ -203,11 +237,13 @@
 
     @media (max-width: 650px) {
       header { padding-top: 28px; }
-      .hero { padding: 30px 16px; border-radius: 26px; }
-      .button { width: 100%; max-width: 330px; font-size: 18px; padding: 15px 22px; }
+      .hero { padding: 30px 16px; border-radius: 28px; }
+      .button { width: 100%; max-width: 340px; font-size: 18px; padding: 15px 22px; }
       p { font-size: 18px; }
       .butterfly { opacity: .35; }
       nav a { margin: 6px 7px; font-size: 15px; }
+      section { padding: 58px 16px; }
+      .card { padding: 32px 18px; }
     }
   </style>
 </head>
@@ -224,6 +260,7 @@
   <div class="hero">
     <img class="logo" src="CreationsbyYesGirl-logo.png" alt="Creations By Yes Girl logo">
 
+    <div class="eyebrow">Faith • Encouragement • Creativity</div>
     <h1>I am God's Yes Girl!</h1>
     <h2>And you know what? You can be too!</h2>
 
@@ -243,6 +280,7 @@
 
 <nav>
   <a href="#about">About</a>
+  <a href="#story">My Story</a>
   <a href="#youtube">YouTube</a>
   <a href="#shop">Shop</a>
   <a href="#blog">Blog</a>
@@ -257,16 +295,29 @@
       encouragement, creativity, testimony, and hope.
     </p>
     <p>
-      My heart is to say YES when God says step, and to encourage others to trust Him too. 💗
+      My heart is to say <span class="highlight">YES</span> when God says step, and to encourage others to trust Him too. 💗
     </p>
 
     <div class="icons">
-      <div class="icon-card"><div>✝️</div><h3>Faith</h3><p>Growing closer to Jesus every day.</p></div>
-      <div class="icon-card"><div>🦋</div><h3>Encouragement</h3><p>Uplifting hearts with His Truth.</p></div>
-      <div class="icon-card"><div>💗</div><h3>Creativity</h3><p>Created to create for His glory.</p></div>
-      <div class="icon-card"><div>🎵</div><h3>Music</h3><p>Worshiping through songs from the heart.</p></div>
-      <div class="icon-card"><div>📖</div><h3>Books</h3><p>Stories and words that inspire faith.</p></div>
+      <div class="soft-card"><div class="icon">✝️</div><h3>Faith</h3><p>Growing closer to Jesus every day.</p></div>
+      <div class="soft-card"><div class="icon">🦋</div><h3>Encouragement</h3><p>Uplifting hearts with His Truth.</p></div>
+      <div class="soft-card"><div class="icon">💗</div><h3>Creativity</h3><p>Created to create for His glory.</p></div>
+      <div class="soft-card"><div class="icon">🎵</div><h3>Music</h3><p>Worshiping through songs from the heart.</p></div>
+      <div class="soft-card"><div class="icon">📖</div><h3>Books</h3><p>Stories and words that inspire faith.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="card">
+    <h1>My Story</h1>
+    <p class="scripture">
+      God pulled me back onto solid ground. That is my why.
+    </p>
+    <p>
+      Creations By Yes Girl was born from a simple heart posture: trusting God enough to say yes. My prayer is that every person who visits this space feels loved, encouraged, and reminded that God still has a beautiful purpose for their life.
+    </p>
+    <p><strong>You were born with a purpose. Let His light shine through you today. ✨</strong></p>
   </div>
 </section>
 
@@ -284,12 +335,13 @@
   <div class="card">
     <h1>Shop Coming Soon</h1>
     <p>
-      Faith-inspired creations, shirts, gifts, books, and encouraging designs are coming soon.
+      Faith-inspired creations, shirts, gifts, books, music, journals, and encouraging designs are coming soon.
     </p>
     <div class="grid">
-      <div class="mini-card"><div>👕</div><h3>Shirts</h3><p>Wearable reminders of God's love.</p></div>
-      <div class="mini-card"><div>☕</div><h3>Gifts</h3><p>Encouragement for everyday life.</p></div>
-      <div class="mini-card"><div>📚</div><h3>Books</h3><p>Faith-filled words for families and hearts.</p></div>
+      <div class="soft-card"><div class="icon">👕</div><h3>Shirts</h3><p>Wearable reminders of God's love.</p></div>
+      <div class="soft-card"><div class="icon">☕</div><h3>Gifts</h3><p>Encouragement for everyday life.</p></div>
+      <div class="soft-card"><div class="icon">📚</div><h3>Books</h3><p>Faith-filled words for families and hearts.</p></div>
+      <div class="soft-card"><div class="icon">🎨</div><h3>Scripture Art</h3><p>Beautiful reminders of His Truth.</p></div>
     </div>
   </div>
 </section>
@@ -300,9 +352,12 @@
     <p class="scripture">
       “My heart is to share what God is teaching me, one YES at a time.”
     </p>
-    <p>
-      Blog posts, testimonies, scriptures, and encouragement will live here soon.
-    </p>
+    <div class="two-column">
+      <div class="soft-card"><h3>Today's Encouragement</h3><p>Short faith-filled reminders for your day.</p></div>
+      <div class="soft-card"><h3>Testimony Notes</h3><p>Stories of what God has done and is still doing.</p></div>
+      <div class="soft-card"><h3>Scripture Reflections</h3><p>Bible verses, prayers, and encouragement.</p></div>
+      <div class="soft-card"><h3>Creative Updates</h3><p>Books, songs, designs, and new creations.</p></div>
+    </div>
   </div>
 </section>
 
@@ -313,6 +368,10 @@
       Need prayer? You are not alone. This space will soon include a simple way to reach out for encouragement and prayer.
     </p>
     <p><strong>Jesus loves you, and so do I. 💜</strong></p>
+    <div class="button-row">
+      <a class="button" href="mailto:Amberbostic@hotmail.com?subject=Prayer%20Request">Send a Prayer Request</a>
+      <a class="button light" href="#home">Back to Top ↑</a>
+    </div>
   </div>
 </section>
 
