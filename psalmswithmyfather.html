@@ -11,156 +11,182 @@
     body {
       margin: 0;
       font-family: Georgia, 'Times New Roman', serif;
-      color: #32164f;
+      color: #24113f;
       text-align: center;
-      background: linear-gradient(135deg, #fff3f8, #ead8ff, #fff7fb);
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.8), transparent 18%),
-        radial-gradient(circle at 85% 15%, rgba(255,214,236,.65), transparent 20%),
-        radial-gradient(circle at 50% 85%, rgba(230,214,255,.65), transparent 24%);
-      z-index: -1;
-    }
-
-    header {
-      padding: 70px 20px 55px;
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,.95), transparent 34%),
-        radial-gradient(circle at top right, rgba(255,214,236,.9), transparent 33%),
-        linear-gradient(135deg, #fff7fb, #ffd6ec, #e6d6ff);
-    }
-
-    .hero {
-      max-width: 1050px;
-      margin: auto;
-      background: rgba(255,255,255,.70);
-      border: 1px solid rgba(255,255,255,.9);
-      border-radius: 42px;
-      padding: 42px 26px;
-      box-shadow: 0 24px 70px rgba(74, 26, 110, .18);
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.82);
-      color: #8b2f83;
-      font-weight: bold;
-      box-shadow: 0 0 18px rgba(214,156,255,.35);
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      margin: 20px 0 10px;
-      color: #3b176b;
-      line-height: 1.05;
-    }
-
-    h2 {
-      color: #c04491;
-      font-style: italic;
-      font-size: clamp(24px, 4vw, 34px);
-    }
-
-    h3 {
-      color: #7b3fa1;
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-size: 20px;
-      max-width: 850px;
-      margin: 15px auto;
-      line-height: 1.7;
+        radial-gradient(circle at 12% 14%, rgba(255, 214, 236, .75), transparent 22%),
+        radial-gradient(circle at 86% 18%, rgba(230, 214, 255, .75), transparent 25%),
+        linear-gradient(135deg, #fff8fc, #f4e9ff, #fff4fb);
+      overflow-x: hidden;
     }
 
     nav {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
       background: rgba(255,255,255,.94);
       backdrop-filter: blur(9px);
       border-bottom: 1px solid rgba(123, 63, 161, .12);
-      padding: 12px;
-      text-align: center;
+      padding: 13px;
     }
 
     nav a {
-      color: #6b2d91;
+      color: #4a1674;
       font-weight: bold;
       text-decoration: none;
-      margin: 8px 12px;
+      margin: 8px 18px;
+      font-size: 18px;
       display: inline-block;
     }
 
     nav a:hover { color: #c04491; }
 
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 9% 12%, rgba(188,130,255,.18), transparent 18%),
+        radial-gradient(circle at 90% 8%, rgba(255,160,210,.18), transparent 18%),
+        radial-gradient(circle at 8% 92%, rgba(255,160,210,.22), transparent 21%),
+        radial-gradient(circle at 92% 88%, rgba(188,130,255,.22), transparent 22%),
+        rgba(255,255,255,.74);
+      padding: 56px 28px 70px;
+      border-left: 1px solid rgba(214,156,255,.22);
+      border-right: 1px solid rgba(214,156,255,.22);
+      position: relative;
+      overflow: hidden;
     }
 
-    .card {
-      background: rgba(255,255,255,.9);
-      padding: 44px 28px;
-      border-radius: 30px;
-      box-shadow: 0 0 30px rgba(100, 50, 130, .14);
-      border: 1px solid rgba(255,255,255,.92);
-      margin-bottom: 34px;
+    .corner {
+      position: absolute;
+      font-size: 92px;
+      opacity: .55;
+      pointer-events: none;
+      filter: drop-shadow(0 5px 10px rgba(123,63,161,.12));
     }
 
-    .scripture {
-      font-size: 23px;
+    .corner.left { top: 42px; left: 26px; transform: rotate(-18deg); }
+    .corner.right { bottom: 34px; right: 34px; transform: rotate(16deg); }
+    .corner.flower-left { bottom: 54px; left: 38px; font-size: 80px; transform: rotate(-8deg); }
+    .corner.flower-right { top: 70px; right: 46px; font-size: 78px; transform: rotate(10deg); }
+
+    .intro {
+      max-width: 850px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 86px);
+      color: #c04491;
       font-style: italic;
-      color: #6b2d91;
-      background: #fff7fb;
-      padding: 26px;
-      border-radius: 24px;
-      border-left: 7px solid #c04491;
+      font-weight: normal;
+      line-height: 1.05;
+      margin: 38px 0 10px;
     }
 
-    .poem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+    .title-butterfly {
+      font-size: 44px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .flourish {
+      color: #a865d6;
+      font-size: 32px;
+      margin: 10px 0 32px;
+      letter-spacing: 8px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.72;
+      margin: 16px auto;
+      max-width: 850px;
+    }
+
+    .divider {
+      color: #c04491;
+      font-size: 26px;
+      margin: 28px 0;
+    }
+
+    .script-line {
+      font-size: clamp(32px, 5vw, 48px);
+      color: #c04491;
+      font-style: italic;
+      margin: 32px 0 14px;
+      line-height: 1.15;
+    }
+
+    .three-steps {
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+      flex-wrap: wrap;
+      margin: 25px auto;
+      font-size: 22px;
+      color: #32164f;
+    }
+
+    .three-steps span {
+      white-space: nowrap;
+    }
+
+    .identity {
+      color: #b52e8a;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: bold;
       margin-top: 34px;
     }
 
-    .poem-card {
-      background: #fff7fb;
-      border: 1px solid rgba(214,156,255,.28);
-      border-radius: 26px;
-      padding: 28px 22px;
-      box-shadow: 0 0 18px rgba(100,50,130,.10);
-      min-height: 260px;
+    .never-alone {
+      color: #c04491;
+      font-size: clamp(30px, 5vw, 46px);
+      font-style: italic;
+      margin-top: -6px;
     }
 
-    .poem-icon {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .signature {
+      margin: 34px auto 20px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .signature .name {
+      display: block;
+      font-size: clamp(42px, 7vw, 70px);
+      color: #24113f;
+      font-style: italic;
+      margin: 2px 0 -4px;
+    }
+
+    .yes-line {
+      color: #7b3fa1;
+      font-size: 28px;
+      font-style: italic;
+      margin-top: 22px;
+    }
+
+    .button-row {
+      margin: 36px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      margin-top: 18px;
-      padding: 15px 28px;
+      padding: 15px 30px;
       background: linear-gradient(135deg, #7b3fa1, #b65ad6);
       color: white;
       text-decoration: none;
       border-radius: 999px;
       font-size: 18px;
       font-weight: bold;
-      min-width: 230px;
       box-shadow: 0 0 22px rgba(214,156,255,.65);
     }
 
@@ -170,55 +196,64 @@
       border: 2px solid #d69cff;
     }
 
+    .collection {
+      margin: 70px auto 0;
+      max-width: 950px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .collection-card {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(214,156,255,.28);
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(100,50,130,.12);
+      padding: 38px 24px;
+      margin-bottom: 28px;
+    }
+
+    .collection-card h2 {
+      color: #3b176b;
+      font-size: clamp(34px, 6vw, 58px);
+      margin: 0 0 10px;
+    }
+
     .placeholder {
-      background: rgba(255,255,255,.72);
+      margin: 22px auto 0;
+      max-width: 680px;
+      padding: 32px 20px;
+      border-radius: 22px;
       border: 2px dashed #d69cff;
-      border-radius: 20px;
-      padding: 35px 20px;
-      margin-top: 20px;
-      color: #7b3fa1;
+      color: #8b2f83;
+      background: #fff7fb;
       font-style: italic;
+      font-size: 19px;
     }
 
     footer {
-      padding: 38px 20px;
+      padding: 36px 20px;
       background: #3b244d;
       color: white;
-      text-align: center;
     }
 
-    footer p { font-size: 17px; }
+    footer p {
+      font-size: 17px;
+      margin: 8px auto;
+    }
 
-    @media (max-width: 650px) {
-      header { padding: 44px 16px; }
-      .hero { border-radius: 28px; padding: 30px 18px; }
-      p { font-size: 18px; }
-      nav a { margin: 6px 7px; font-size: 15px; }
-      main { padding: 50px 16px; }
-      .card { padding: 32px 18px; }
-      .button { width: 100%; max-width: 340px; }
+    @media (max-width: 700px) {
+      nav a { margin: 6px 8px; font-size: 15px; }
+      .page { padding: 36px 16px 54px; }
+      .corner { opacity: .22; font-size: 72px; }
+      p { font-size: 19px; }
+      .three-steps { gap: 12px; font-size: 18px; }
+      .three-steps span { white-space: normal; width: 100%; }
+      .button { width: 100%; max-width: 330px; }
     }
   </style>
 </head>
 
 <body>
-
-<header>
-  <div class="hero">
-    <div class="eyebrow">Conversations with my Heavenly Father...</div>
-    <h1>🖋️ Psalms with My Father</h1>
-    <h2>Poetry by Amber Bostic</h2>
-
-    <p>
-      A growing collection of poems written through prayer, worship, healing, gratitude,
-      and the faithful love of my Heavenly Father.
-    </p>
-
-    <p><strong>One YES at a time. 💗</strong></p>
-
-    <a class="button" href="index.html">← Return Home</a>
-  </div>
-</header>
 
 <nav>
   <a href="index.html">Home</a>
@@ -228,78 +263,91 @@
   <a href="https://creations-by-yes-girl-316.printify.me" target="_blank">Shop</a>
 </nav>
 
-<main>
+<main class="page">
 
-  <section class="card">
-    <h2>🌸 Welcome, Friend</h2>
+  <div class="corner left">🦋</div>
+  <div class="corner right">🦋</div>
+  <div class="corner flower-left">🌸</div>
+  <div class="corner flower-right">🌸</div>
+
+  <section class="intro">
+    <h1><span class="title-butterfly">🦋</span>Poetry Collection</h1>
+    <div class="flourish">─ ♡ ─</div>
+
+    <p><strong>Every poem on this page was written with my Heavenly Father.</strong></p>
+
+    <p>Some were written in seasons of joy.</p>
+
+    <p>Some were written during the darkest moments of my life.</p>
+
+    <p>Others were written through healing, surrender, gratitude, solitude, and worship.</p>
+
+    <div class="divider">─ ♥ ─</div>
+
+    <p>I pray that these poems remind you that you are never alone.</p>
 
     <p>
-      Welcome to <strong>Psalms with My Father</strong>.
+      Whatever season you are in, I know what it feels like to walk through
+      brokenness, fear, and uncertainty.
     </p>
 
     <p>
-      These poems are pieces of my heart — written in moments of surrender,
-      worship, healing, thankfulness, and conversation with God.
+      By God's grace, I have learned that He is faithful through every season,
+      and He never leaves our side.
     </p>
 
-    <p>
-      My prayer is that every poem points you to Jesus and reminds you that
-      you are loved, chosen, forgiven, and never alone.
-    </p>
+    <div class="divider">─ ♥ ─</div>
 
-    <p class="scripture">
-      “Let the words of my mouth and the meditation of my heart be acceptable in Your sight,
-      O Lord, my rock and my redeemer.”
-      <br><strong>— Psalm 19:14</strong>
-    </p>
-  </section>
+    <div class="script-line">Let's take this leap of faith together...</div>
 
-  <section class="card">
-    <h2>🦋 Poetry Collection</h2>
-    <p>
-      This is where your watercolor poem pictures will be added.
-      Each poem will have its own peaceful space to be read, shared, and revisited.
-    </p>
+    <div class="three-steps">
+      <span>💜 One step at a time.</span>
+      <span>💜 One poem at a time.</span>
+      <span>💜 One YES at a time.</span>
+    </div>
 
-    <div class="poem-grid">
+    <div class="divider">─ ♥ ─</div>
 
-      <div class="poem-card">
-        <div class="poem-icon">💜</div>
-        <h3>My Heart's Desire</h3>
-        <p>A poem of gratitude, worship, freedom, and love for God.</p>
-        <div class="placeholder">Watercolor image coming soon</div>
-      </div>
+    <p class="identity">You are loved. You are chosen. You are forgiven.</p>
+    <p class="never-alone">You are never alone. ♡</p>
 
-      <div class="poem-card">
-        <div class="poem-icon">🧭</div>
-        <h3>GPS</h3>
-        <p>A reminder that God is the One who leads, redirects, and gets us where we belong.</p>
-        <div class="placeholder">Watercolor image coming soon</div>
-      </div>
+    <div class="signature">
+      <div>Written with love,</div>
+      <span class="name">♡ Amber Bostic</span>
+      <div>God's Yes Girl</div>
+      <div class="yes-line">─ One YES at a time. 🦋 ─</div>
+    </div>
 
-      <div class="poem-card">
-        <div class="poem-icon">📖</div>
-        <h3>Psalms to My Father</h3>
-        <p>Words of praise, prayer, and worship from the heart.</p>
-        <div class="placeholder">Watercolor image coming soon</div>
-      </div>
-
-      <div class="poem-card">
-        <div class="poem-icon">🌅</div>
-        <h3>Morning Light</h3>
-        <p>A poem of hope, new beginnings, and God's faithful presence.</p>
-        <div class="placeholder">Watercolor image coming soon</div>
-      </div>
-
+    <div class="button-row">
+      <a class="button" href="#collection">Read the Collection ↓</a>
+      <a class="button light" href="index.html">← Return Home</a>
     </div>
   </section>
 
-  <section class="card">
-    <h2>✨ More Poems Coming Soon</h2>
-    <p>
-      As God gives me new words, I will continue adding them here.
-      This page will grow one poem, one prayer, and one YES at a time.
-    </p>
+  <section id="collection" class="collection">
+    <div class="collection-card">
+      <h2>💜 My Heart's Desire</h2>
+      <p>A poem of gratitude, worship, freedom, and love for God.</p>
+      <div class="placeholder">Watercolor image coming soon</div>
+    </div>
+
+    <div class="collection-card">
+      <h2>💧 Drowning</h2>
+      <p>A poem for the moments when life feels heavy, but Jesus is still near.</p>
+      <div class="placeholder">Watercolor image coming soon</div>
+    </div>
+
+    <div class="collection-card">
+      <h2>✝️ I Don't Need Anyone but Jesus</h2>
+      <p>A reminder that Jesus is enough, even in lonely seasons.</p>
+      <div class="placeholder">Watercolor image coming soon</div>
+    </div>
+
+    <div class="collection-card">
+      <h2>🧭 GPS</h2>
+      <p>A reminder that God leads, redirects, and gets us where we belong.</p>
+      <div class="placeholder">Watercolor image coming soon</div>
+    </div>
   </section>
 
 </main>
