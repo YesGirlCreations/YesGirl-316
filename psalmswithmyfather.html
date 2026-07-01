@@ -7,6 +7,7 @@
 
   <style>
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -34,8 +35,8 @@
       color: #4a1674;
       font-weight: bold;
       text-decoration: none;
-      margin: 8px 18px;
-      font-size: 18px;
+      margin: 8px 14px;
+      font-size: 17px;
       display: inline-block;
     }
 
@@ -50,7 +51,7 @@
         radial-gradient(circle at 90% 8%, rgba(255,160,210,.18), transparent 18%),
         radial-gradient(circle at 8% 92%, rgba(255,160,210,.22), transparent 21%),
         radial-gradient(circle at 92% 88%, rgba(188,130,255,.22), transparent 22%),
-        rgba(255,255,255,.74);
+        rgba(255,255,255,.76);
       padding: 56px 28px 70px;
       border-left: 1px solid rgba(214,156,255,.22);
       border-right: 1px solid rgba(214,156,255,.22);
@@ -61,7 +62,7 @@
     .corner {
       position: absolute;
       font-size: 92px;
-      opacity: .55;
+      opacity: .45;
       pointer-events: none;
       filter: drop-shadow(0 5px 10px rgba(123,63,161,.12));
     }
@@ -72,7 +73,7 @@
     .corner.flower-right { top: 70px; right: 46px; font-size: 78px; transform: rotate(10deg); }
 
     .intro {
-      max-width: 850px;
+      max-width: 860px;
       margin: 0 auto;
       position: relative;
       z-index: 2;
@@ -101,7 +102,7 @@
     }
 
     p {
-      font-size: 24px;
+      font-size: 23px;
       line-height: 1.72;
       margin: 16px auto;
       max-width: 850px;
@@ -131,22 +132,13 @@
       color: #32164f;
     }
 
-    .three-steps span {
-      white-space: nowrap;
-    }
+    .three-steps span { white-space: nowrap; }
 
     .identity {
       color: #b52e8a;
-      font-size: clamp(26px, 4vw, 38px);
+      font-size: clamp(25px, 4vw, 36px);
       font-weight: bold;
       margin-top: 34px;
-    }
-
-    .never-alone {
-      color: #c04491;
-      font-size: clamp(30px, 5vw, 46px);
-      font-style: italic;
-      margin-top: -6px;
     }
 
     .signature {
@@ -197,37 +189,69 @@
     }
 
     .collection {
-      margin: 70px auto 0;
-      max-width: 950px;
+      margin: 80px auto 0;
+      max-width: 980px;
       position: relative;
       z-index: 2;
     }
 
-    .collection-card {
+    .gallery-title {
+      color: #3b176b;
+      font-size: clamp(36px, 6vw, 60px);
+      margin-bottom: 20px;
+      font-style: italic;
+      font-weight: normal;
+    }
+
+    .poem-piece {
+      margin: 55px auto;
+    }
+
+    .poem-image {
+      width: 100%;
+      max-width: 790px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(123,63,161,.18);
+      transition: transform .35s ease, box-shadow .35s ease;
+      background: white;
+    }
+
+    .poem-image:hover {
+      transform: scale(1.018);
+      box-shadow: 0 24px 60px rgba(123,63,161,.24);
+    }
+
+    .poem-note {
+      max-width: 720px;
+      font-size: 18px;
+      color: #6b2d91;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    .art-divider {
+      color: #c04491;
+      font-size: 25px;
+      margin: 54px auto;
+      letter-spacing: 4px;
+    }
+
+    .coming-soon {
+      max-width: 790px;
+      margin: 0 auto;
       background: rgba(255,255,255,.82);
       border: 1px solid rgba(214,156,255,.28);
-      border-radius: 30px;
-      box-shadow: 0 0 30px rgba(100,50,130,.12);
-      padding: 38px 24px;
-      margin-bottom: 28px;
+      border-radius: 28px;
+      box-shadow: 0 0 30px rgba(100,50,130,.10);
+      padding: 34px 24px;
     }
 
-    .collection-card h2 {
+    .coming-soon h2 {
       color: #3b176b;
-      font-size: clamp(34px, 6vw, 58px);
-      margin: 0 0 10px;
-    }
-
-    .placeholder {
-      margin: 22px auto 0;
-      max-width: 680px;
-      padding: 32px 20px;
-      border-radius: 22px;
-      border: 2px dashed #d69cff;
-      color: #8b2f83;
-      background: #fff7fb;
-      font-style: italic;
-      font-size: 19px;
+      font-size: clamp(30px, 5vw, 48px);
+      margin: 0 0 12px;
     }
 
     footer {
@@ -242,13 +266,15 @@
     }
 
     @media (max-width: 700px) {
-      nav a { margin: 6px 8px; font-size: 15px; }
+      nav a { margin: 6px 7px; font-size: 15px; }
       .page { padding: 36px 16px 54px; }
-      .corner { opacity: .22; font-size: 72px; }
+      .corner { opacity: .20; font-size: 72px; }
       p { font-size: 19px; }
       .three-steps { gap: 12px; font-size: 18px; }
       .three-steps span { white-space: normal; width: 100%; }
       .button { width: 100%; max-width: 330px; }
+      .poem-piece { margin: 38px auto; }
+      .art-divider { margin: 38px auto; }
     }
   </style>
 </head>
@@ -277,22 +303,17 @@
     <div class="flourish">─ ♡ ─</div>
 
     <p><strong>Every poem on this page was written with my Heavenly Father.</strong></p>
-
     <p>Some were written in seasons of joy.</p>
-
     <p>Some were written during the darkest moments of my life.</p>
-
     <p>Others were written through healing, surrender, gratitude, solitude, and worship.</p>
 
     <div class="divider">─ ♥ ─</div>
 
     <p>I pray that these poems remind you that you are never alone.</p>
-
     <p>
       Whatever season you are in, I know what it feels like to walk through
       brokenness, fear, and uncertainty.
     </p>
-
     <p>
       By God's grace, I have learned that He is faithful through every season,
       and He never leaves our side.
@@ -310,8 +331,7 @@
 
     <div class="divider">─ ♥ ─</div>
 
-    <p class="identity">You are loved. You are chosen. You are forgiven.</p>
-    <p class="never-alone">You are never alone. ♡</p>
+    <p class="identity">You are loved. You are chosen. You are forgiven. You are never alone.</p>
 
     <div class="signature">
       <div>Written with love,</div>
@@ -326,40 +346,42 @@
     </div>
   </section>
 
-  <div class="collection-card">
+  <section id="collection" class="collection">
+    <h2 class="gallery-title">Psalms with My Father</h2>
+    <div class="flourish">─ 🦋 ─</div>
 
-  <h2>💜 My Heart's Desire</h2>
-
-  <img
-    src="myheartsdesire.jpg"
-    alt="My Heart's Desire by Amber Bostic"
-    style="
-      width:100%;
-      max-width:750px;
-      display:block;
-      margin:30px auto;
-      border-radius:20px;
-      box-shadow:0 15px 35px rgba(123,63,161,.18);
-    ">
-
-</div>
-
-    <div class="collection-card">
-      <h2>💧 Drowning</h2>
-      <p>A poem for the moments when life feels heavy, but Jesus is still near.</p>
-      <div class="placeholder">Watercolor image coming soon</div>
+    <div class="poem-piece">
+      <img class="poem-image" src="myheartsdesire.jpg" alt="My Heart's Desire by Amber Bostic">
+      <p class="poem-note">A poem of gratitude, worship, freedom, and love for God.</p>
     </div>
 
-    <div class="collection-card">
-      <h2>✝️ I Don't Need Anyone but Jesus</h2>
-      <p>A reminder that Jesus is enough, even in lonely seasons.</p>
-      <div class="placeholder">Watercolor image coming soon</div>
+    <div class="art-divider">♡──────── 🦋 ────────♡</div>
+
+    <div class="poem-piece">
+      <img class="poem-image" src="drowning.jpg" alt="Drowning by Amber Bostic">
+      <p class="poem-note">A poem for the moments when life feels heavy, but Jesus is still near.</p>
     </div>
 
-    <div class="collection-card">
+    <div class="art-divider">♡──────── 🦋 ────────♡</div>
+
+    <div class="poem-piece">
+      <img class="poem-image" src="drowningfullsong.jpg" alt="Drowning full song by Amber Bostic">
+      <p class="poem-note">The full song version of Drowning.</p>
+    </div>
+
+    <div class="art-divider">♡──────── 🦋 ────────♡</div>
+
+    <div class="poem-piece">
+      <img class="poem-image" src="idontneedanyonebutjesus.jpg" alt="I Don't Need Anyone but Jesus by Amber Bostic">
+      <p class="poem-note">A reminder that Jesus is enough, even in lonely seasons.</p>
+    </div>
+
+    <div class="art-divider">♡──────── 🦋 ────────♡</div>
+
+    <div class="coming-soon">
       <h2>🧭 GPS</h2>
       <p>A reminder that God leads, redirects, and gets us where we belong.</p>
-      <div class="placeholder">Watercolor image coming soon</div>
+      <p><em>Watercolor image coming soon.</em></p>
     </div>
   </section>
 
