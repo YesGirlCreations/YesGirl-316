@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psalms with My Father | Creations By Yes Girl</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #32164f;
+      text-align: center;
+      background: linear-gradient(135deg, #fff3f8, #ead8ff, #fff7fb);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.8), transparent 18%),
+        radial-gradient(circle at 85% 15%, rgba(255,214,236,.65), transparent 20%),
+        radial-gradient(circle at 50% 85%, rgba(230,214,255,.65), transparent 24%);
+      z-index: -1;
+    }
+
+    header {
+      padding: 70px 20px 55px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.95), transparent 34%),
+        radial-gradient(circle at top right, rgba(255,214,236,.9), transparent 33%),
+        linear-gradient(135deg, #fff7fb, #ffd6ec, #e6d6ff);
+    }
+
+    .hero {
+      max-width: 1050px;
+      margin: auto;
+      background: rgba(255,255,255,.70);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 42px;
+      padding: 42px 26px;
+      box-shadow: 0 24px 70px rgba(74, 26, 110, .18);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.82);
+      color: #8b2f83;
+      font-weight: bold;
+      box-shadow: 0 0 18px rgba(214,156,255,.35);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      margin: 20px 0 10px;
+      color: #3b176b;
+      line-height: 1.05;
+    }
+
+    h2 {
+      color: #c04491;
+      font-style: italic;
+      font-size: clamp(24px, 4vw, 34px);
+    }
+
+    h3 {
+      color: #7b3fa1;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 850px;
+      margin: 15px auto;
+      line-height: 1.7;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(9px);
+      border-bottom: 1px solid rgba(123, 63, 161, .12);
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #6b2d91;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 8px 12px;
+      display: inline-block;
+    }
+
+    nav a:hover { color: #c04491; }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,.9);
+      padding: 44px 28px;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(100, 50, 130, .14);
+      border: 1px solid rgba(255,255,255,.92);
+      margin-bottom: 34px;
+    }
+
+    .scripture {
+      font-size: 23px;
+      font-style: italic;
+      color: #6b2d91;
+      background: #fff7fb;
+      padding: 26px;
+      border-radius: 24px;
+      border-left: 7px solid #c04491;
+    }
+
+    .poem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .poem-card {
+      background: #fff7fb;
+      border: 1px solid rgba(214,156,255,.28);
+      border-radius: 26px;
+      padding: 28px 22px;
+      box-shadow: 0 0 18px rgba(100,50,130,.10);
+      min-height: 260px;
+    }
+
+    .poem-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 15px 28px;
+      background: linear-gradient(135deg, #7b3fa1, #b65ad6);
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 230px;
+      box-shadow: 0 0 22px rgba(214,156,255,.65);
+    }
+
+    .button.light {
+      background: white;
+      color: #7b3fa1;
+      border: 2px solid #d69cff;
+    }
+
+    .placeholder {
+      background: rgba(255,255,255,.72);
+      border: 2px dashed #d69cff;
+      border-radius: 20px;
+      padding: 35px 20px;
+      margin-top: 20px;
+      color: #7b3fa1;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 38px 20px;
+      background: #3b244d;
+      color: white;
+      text-align: center;
+    }
+
+    footer p { font-size: 17px; }
+
+    @media (max-width: 650px) {
+      header { padding: 44px 16px; }
+      .hero { border-radius: 28px; padding: 30px 18px; }
+      p { font-size: 18px; }
+      nav a { margin: 6px 7px; font-size: 15px; }
+      main { padding: 50px 16px; }
+      .card { padding: 32px 18px; }
+      .button { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="eyebrow">Conversations with my Heavenly Father...</div>
+    <h1>🖋️ Psalms with My Father</h1>
+    <h2>Poetry by Amber Bostic</h2>
+
+    <p>
+      A growing collection of poems written through prayer, worship, healing, gratitude,
+      and the faithful love of my Heavenly Father.
+    </p>
+
+    <p><strong>One YES at a time. 💗</strong></p>
+
+    <a class="button" href="index.html">← Return Home</a>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="mystory.html">My Story</a>
+  <a href="encouragement.html">Journal</a>
+  <a href="https://www.youtube.com/@yesgirl-316" target="_blank">YouTube</a>
+  <a href="https://creations-by-yes-girl-316.printify.me" target="_blank">Shop</a>
+</nav>
+
+<main>
+
+  <section class="card">
+    <h2>🌸 Welcome, Friend</h2>
+
+    <p>
+      Welcome to <strong>Psalms with My Father</strong>.
+    </p>
+
+    <p>
+      These poems are pieces of my heart — written in moments of surrender,
+      worship, healing, thankfulness, and conversation with God.
+    </p>
+
+    <p>
+      My prayer is that every poem points you to Jesus and reminds you that
+      you are loved, chosen, forgiven, and never alone.
+    </p>
+
+    <p class="scripture">
+      “Let the words of my mouth and the meditation of my heart be acceptable in Your sight,
+      O Lord, my rock and my redeemer.”
+      <br><strong>— Psalm 19:14</strong>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🦋 Poetry Collection</h2>
+    <p>
+      This is where your watercolor poem pictures will be added.
+      Each poem will have its own peaceful space to be read, shared, and revisited.
+    </p>
+
+    <div class="poem-grid">
+
+      <div class="poem-card">
+        <div class="poem-icon">💜</div>
+        <h3>My Heart's Desire</h3>
+        <p>A poem of gratitude, worship, freedom, and love for God.</p>
+        <div class="placeholder">Watercolor image coming soon</div>
+      </div>
+
+      <div class="poem-card">
+        <div class="poem-icon">🧭</div>
+        <h3>GPS</h3>
+        <p>A reminder that God is the One who leads, redirects, and gets us where we belong.</p>
+        <div class="placeholder">Watercolor image coming soon</div>
+      </div>
+
+      <div class="poem-card">
+        <div class="poem-icon">📖</div>
+        <h3>Psalms to My Father</h3>
+        <p>Words of praise, prayer, and worship from the heart.</p>
+        <div class="placeholder">Watercolor image coming soon</div>
+      </div>
+
+      <div class="poem-card">
+        <div class="poem-icon">🌅</div>
+        <h3>Morning Light</h3>
+        <p>A poem of hope, new beginnings, and God's faithful presence.</p>
+        <div class="placeholder">Watercolor image coming soon</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>✨ More Poems Coming Soon</h2>
+    <p>
+      As God gives me new words, I will continue adding them here.
+      This page will grow one poem, one prayer, and one YES at a time.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Amber Bostic • Creations By Yes Girl</p>
+  <p>One YES at a time. 🦋</p>
+</footer>
+
+</body>
+</html>
