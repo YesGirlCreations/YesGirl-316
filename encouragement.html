@@ -5,96 +5,312 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amber's Encouragement Journal</title>
   <style>
-    body { margin: 0; font-family: Georgia, serif; color: #3b244d; background: linear-gradient(135deg, #fff8fc, #f6edff, #fff3f8); line-height: 1.7; }
-    header { text-align: center; padding: 70px 20px; background: radial-gradient(circle, #fff7fb, #ffd6ec, #ead8ff); }
-    header h1 { font-size: 48px; margin-bottom: 10px; color: #3b176b; }
-    header p { max-width: 850px; margin: 16px auto; font-size: 20px; }
-    .verse { font-style: italic; color: #7b3fa1; font-size: 22px; }
-    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-    .entry { background: rgba(255, 255, 255, 0.92); border-radius: 28px; padding: 35px; margin: 35px 0; box-shadow: 0 0 25px rgba(100, 50, 130, 0.14); border: 1px solid rgba(198, 129, 196, 0.25); }
-    .entry h2 { color: #b14f93; font-size: 32px; margin-bottom: 5px; }
-    .entry h3 { color: #7b3fa1; margin-top: 28px; }
-    blockquote { background: #fff7fb; border-left: 5px solid #c04491; padding: 18px 22px; border-radius: 14px; font-size: 19px; margin: 20px 0; }
-    .signature { margin-top: 25px; font-weight: bold; font-size: 20px; }
-    .reminder { margin-top: 25px; padding: 20px; border-radius: 18px; background: linear-gradient(135deg, #fff1f8, #f1e5ff); font-weight: bold; text-align: center; color: #6b2c82; }
-    .back { display: inline-block; margin-top: 25px; padding: 14px 28px; background: linear-gradient(135deg, #7b3fa1, #b65ad6); color: white; text-decoration: none; border-radius: 40px; font-weight: bold; }
-    footer { text-align: center; padding: 30px; background: #3b244d; color: white; }
-    @media (max-width: 650px) { header h1 { font-size: 34px; } .entry { padding: 25px; } .entry h2 { font-size: 26px; } }
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: #3b244d;
+      background: linear-gradient(135deg, #fff8fc, #f6edff, #fff3f8);
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px;
+      background: radial-gradient(circle, #fff7fb, #ffd6ec, #ead8ff);
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #3b176b;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 16px auto;
+      font-size: 20px;
+    }
+
+    .verse {
+      font-style: italic;
+      color: #7b3fa1;
+      font-size: 22px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .entry {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 28px;
+      padding: 35px;
+      margin: 35px 0;
+      box-shadow: 0 0 25px rgba(100, 50, 130, 0.14);
+      border: 1px solid rgba(198, 129, 196, 0.25);
+    }
+
+    .entry h2 {
+      color: #b14f93;
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    .entry h3 {
+      color: #7b3fa1;
+      margin-top: 28px;
+    }
+
+    blockquote {
+      background: #fff7fb;
+      border-left: 5px solid #c04491;
+      padding: 18px 22px;
+      border-radius: 14px;
+      font-size: 19px;
+      margin: 20px 0;
+    }
+
+    .signature {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .reminder {
+      margin-top: 25px;
+      padding: 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff1f8, #f1e5ff);
+      font-weight: bold;
+      text-align: center;
+      color: #6b2c82;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #7b3fa1, #b65ad6);
+      color: white;
+      text-decoration: none;
+      border-radius: 40px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #3b244d;
+      color: white;
+    }
+
+    @media (max-width: 650px) {
+      header h1 {
+        font-size: 34px;
+      }
+
+      .entry {
+        padding: 25px;
+      }
+
+      .entry h2 {
+        font-size: 26px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <header>
   <h1>📖 Amber's Encouragement Journal 🦋</h1>
-  <p class="verse">"Encourage one another and build each other up."<br><strong>1 Thessalonians 5:11</strong></p>
-  <p>Welcome! I'm so glad you're here.</p>
-  <p>This journal is a collection of daily encouragements, Scripture, prayers, and reminders of God's faithfulness. My prayer is that each visit leaves you feeling loved, encouraged, and reminded that God has a beautiful purpose for your life.</p>
-  <p>Thank you for joining me as I learn to say <strong>"Yes"</strong> to Him one day at a time.</p>
+  <p class="verse">
+    "Encourage one another and build each other up."<br>
+    <strong>1 Thessalonians 5:11</strong>
+  </p>
+  <p>
+    Welcome! I'm so glad you're here.
+  </p>
+  <p>
+    This journal is a collection of daily encouragements, Scripture, prayers, and reminders of God's faithfulness.
+    My prayer is that each visit leaves you feeling loved, encouraged, and reminded that God has a beautiful purpose for your life.
+  </p>
+  <p>
+    Thank you for joining me as I learn to say <strong>"Yes"</strong> to Him one day at a time.
+  </p>
   <p><strong>Love,<br>🦋 Amber</strong></p>
   <a class="back" href="index.html">← Back to Home</a>
 </header>
+
 <div class="container">
 
   <div class="entry">
     <h2>🌸 July 2, 2026</h2>
     <h3>One Step of Faith at a Time</h3>
+
     <h3>📖 Scripture</h3>
-    <blockquote>"The Lord directs the steps of the godly. He delights in every detail of their lives."<br><br><strong>Psalm 37:23</strong></blockquote>
-    <h3>💜 Today's Encouragement</h3>
-    <p>Today, remember this: God is not asking you to figure out the whole journey. He is simply asking you to trust Him with the next step.</p>
-    <p>Sometimes faith looks like a big leap. Other times, it looks like one quiet yes, one prayer, one act of obedience, or one moment of trust.</p>
-    <p>You do not have to have every answer today. You just need to stay close to the One who does.</p>
-    <p>He sees you. He loves you. He is guiding you.</p>
-    <p>Keep walking with Him.</p>
-    <p><strong>One step at a time.<br>One prayer at a time.<br>One YES at a time. 💜</strong></p>
+    <blockquote>
+      "The Lord directs the steps of the godly. He delights in every detail of their lives."<br><br>
+      <strong>Psalm 37:23</strong>
+    </blockquote>
+
+    <h3>💜 Encouragement</h3>
+    <p>
+      Have you ever noticed how God doesn't usually reveal the entire journey?
+    </p>
+    <p>
+      Instead, He lovingly invites us to trust Him with the very next step.
+    </p>
+    <p>
+      Sometimes that step feels exciting. Other times it feels uncertain.
+      But every step taken with God is a step in the right direction.
+    </p>
+    <p>
+      You don't have to have every answer today.
+      You simply have to keep saying "yes" to the One who already does.
+    </p>
+    <p>
+      He is directing your steps, even when you cannot yet see where the path is leading.
+    </p>
+    <p><strong>One step of faith today can change tomorrow.</strong></p>
+
     <h3>🙏 Prayer</h3>
-    <p>Heavenly Father, thank You for reminding me that I don't have to see the whole path to trust You with the next step. When fear tries to overwhelm me, help me remember that You are already there, leading the way.</p>
-    <p>Give me the courage to say <strong>YES</strong> to whatever You are asking of me today. Strengthen my faith when I feel weak, calm my heart when I feel uncertain, and remind me that Your plans are always better than my own.</p>
-    <p>Help me to trust You one decision at a time, one prayer at a time, and one step at a time.</p>
-    <p>Thank You for never leaving me, for loving me unconditionally, and for faithfully guiding my life.</p>
-    <p>Today, I choose to place my hand in Yours and follow wherever You lead.</p>
-    <p><strong>In Jesus' precious name,<br>Amen. 💜</strong></p>
-    <div class="reminder">🌷 May you always remember...<br><br>You are loved. You are chosen. You are forgiven. You are never alone. 💜</div>
-    <p class="signature">Written with love,<br>♡ Amber Bostic<br>God's Yes Girl<br>🦋 One YES at a time.</p>
+    <p>
+      Heavenly Father,
+      thank You for walking before me and beside me.
+      Help me trust You with today's step instead of worrying about tomorrow.
+      Strengthen my faith, quiet my fears, and remind me that You delight in leading Your children.
+      Help me keep saying yes to You one step at a time.
+      In Jesus' precious name,
+      Amen.
+    </p>
+
+    <p class="signature">
+      Love,<br>
+      🦋 Amber
+    </p>
+
+    <div class="reminder">
+      💜 Remember today:
+      God is already waiting where He is leading you.<br><br>
+      You are loved.
+      You are chosen.
+      You are forgiven.
+      You are never alone.
+    </div>
   </div>
 
   <div class="entry">
     <h2>🌸 July 1, 2026</h2>
     <h3>One Yes Can Change Everything</h3>
+
     <h3>📖 Scripture</h3>
-    <blockquote>"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him, and He will make your paths straight."<br><br><strong>Proverbs 3:5–6</strong></blockquote>
+    <blockquote>
+      "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him,
+      and He will make your paths straight."<br><br>
+      <strong>Proverbs 3:5–6</strong>
+    </blockquote>
+
     <h3>💜 Encouragement</h3>
-    <p>Have you ever noticed that God rarely shows us the entire journey?</p>
-    <p>Instead, He asks for one step. One act of faith. One "yes."</p>
-    <p>Looking back, I can see that the biggest changes in my life did not happen all at once. They happened each time I trusted God enough to take the next step He placed before me.</p>
-    <p>That is what being God's Yes Girl means to me. Not being fearless. Not having every answer. Simply believing that His direction is always better than my own.</p>
-    <p>Maybe today your "yes" looks like forgiving someone. Maybe it is praying when you do not feel like it. Maybe it is beginning something you have been afraid to start.</p>
-    <p>Whatever it is, remember this: God does not ask us to carry tomorrow. He simply asks us to trust Him today.</p>
+    <p>
+      Have you ever noticed that God rarely shows us the entire journey?
+    </p>
+    <p>
+      Instead, He asks for one step. One act of faith. One "yes."
+    </p>
+    <p>
+      Looking back, I can see that the biggest changes in my life did not happen all at once.
+      They happened each time I trusted God enough to take the next step He placed before me.
+    </p>
+    <p>
+      That is what being God's Yes Girl means to me. Not being fearless. Not having every answer.
+      Simply believing that His direction is always better than my own.
+    </p>
+    <p>
+      Maybe today your "yes" looks like forgiving someone. Maybe it is praying when you do not feel like it.
+      Maybe it is beginning something you have been afraid to start.
+    </p>
+    <p>
+      Whatever it is, remember this: God does not ask us to carry tomorrow. He simply asks us to trust Him today.
+    </p>
     <p><strong>One yes can change everything.</strong></p>
+
     <h3>🙏 Prayer</h3>
-    <p>Father, teach me to trust You with my whole heart. Help me lay down my plans whenever they compete with Yours. Give me the courage to say yes to whatever You ask, knowing that You are faithful in every step. May my life always point others to You. In Jesus' name, Amen.</p>
+    <p>
+      Father, teach me to trust You with my whole heart. Help me lay down my plans whenever they compete with Yours.
+      Give me the courage to say yes to whatever You ask, knowing that You are faithful in every step.
+      May my life always point others to You. In Jesus' name, Amen.
+    </p>
+
     <p class="signature">Love,<br>🦋 Amber</p>
-    <div class="reminder">💜 Remember today: You are loved. You are chosen. You have a purpose. Keep saying "yes" to Jesus, one step at a time.</div>
+
+    <div class="reminder">
+      💜 Remember today: You are loved. You are chosen. You have a purpose.
+      Keep saying "yes" to Jesus, one step at a time.
+    </div>
   </div>
 
   <div class="entry">
     <h2>🌸 June 30, 2026</h2>
     <h3>The Beginning of Something Beautiful</h3>
+
     <h3>📖 Scripture</h3>
-    <blockquote>"Being confident of this, that He who began a good work in you will carry it on to completion until the day of Christ Jesus."<br><br><strong>Philippians 1:6</strong></blockquote>
+    <blockquote>
+      "Being confident of this, that He who began a good work in you will carry it on to completion
+      until the day of Christ Jesus."<br><br>
+      <strong>Philippians 1:6</strong>
+    </blockquote>
+
     <h3>💜 Encouragement</h3>
-    <p>Today marks the beginning of something special.</p>
-    <p>Not because a website was finished. Not because another project was completed. But because I said "yes" to the little step God placed in front of me.</p>
-    <p>Sometimes we wait for the perfect moment before we begin. God often asks us to begin first, trusting that He will shape the journey along the way.</p>
-    <p>Today I am choosing to believe that every small act of obedience matters. Every prayer, every encouraging word, every step of faith can become part of something much bigger than I can see today.</p>
-    <p>If you are reading this, maybe God is inviting you to take one small step too. You do not have to know the whole path. Just trust the One who does.</p>
+    <p>
+      Today marks the beginning of something special.
+    </p>
+    <p>
+      Not because a website was finished. Not because another project was completed.
+      But because I said "yes" to the little step God placed in front of me.
+    </p>
+    <p>
+      Sometimes we wait for the perfect moment before we begin. God often asks us to begin first,
+      trusting that He will shape the journey along the way.
+    </p>
+    <p>
+      Today I am choosing to believe that every small act of obedience matters.
+      Every prayer, every encouraging word, every step of faith can become part of something much bigger than I can see today.
+    </p>
+    <p>
+      If you are reading this, maybe God is inviting you to take one small step too.
+      You do not have to know the whole path. Just trust the One who does.
+    </p>
+
     <h3>🙏 Prayer</h3>
-    <p>Father, thank You for new beginnings. Help me remember that You are the Author of every good thing You call me to do. Give me courage to keep saying yes, even when I do not know what tomorrow holds. Use this journal to encourage hearts, point people toward You, and remind us all that Your plans are always greater than our own. In Jesus' name, Amen.</p>
+    <p>
+      Father, thank You for new beginnings. Help me remember that You are the Author of every good thing You call me to do.
+      Give me courage to keep saying yes, even when I do not know what tomorrow holds.
+      Use this journal to encourage hearts, point people toward You, and remind us all that Your plans are always greater than our own.
+      In Jesus' name, Amen.
+    </p>
+
     <p class="signature">Love,<br>🦋 Amber</p>
-    <div class="reminder">💜 Remember today: You are loved. You are chosen. You have a purpose. Keep saying "yes" to Jesus, one step at a time.</div>
+
+    <div class="reminder">
+      💜 Remember today: You are loved. You are chosen. You have a purpose.
+      Keep saying "yes" to Jesus, one step at a time.
+    </div>
   </div>
 
-  <!-- DAILY ENTRY TEMPLATE: Copy one full entry card, paste it ABOVE the newest entry, then change: Date, title, Scripture, Encouragement, and Prayer. -->
+  <!--
+  DAILY ENTRY TEMPLATE:
+  Copy one full entry card, paste it ABOVE the newest entry, then change:
+  Date, title, Scripture, Encouragement, and Prayer.
+  -->
+
 </div>
-<footer>© 2026 Creations By Yes Girl • Amber</footer>
+
+<footer>
+  © 2026 Creations By Yes Girl • Amber
+</footer>
+
 </body>
 </html>
